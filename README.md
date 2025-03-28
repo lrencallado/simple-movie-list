@@ -4,21 +4,25 @@
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/lrencallado/simple-movies-list.git
+    git clone https://github.com/lrencallado/simple-movie-list.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd simple-movies-list
+    cd simple-movie-list
     ```
 3. Install dependencies using Composer:
     ```bash
     composer install
     ```
-4. Copy the `.env.example` file to `.env`:
+4. Install Node.js dependencies:
+    ```bash
+    npm install
+    ```
+5. Copy the `.env.example` file to `.env`:
     ```bash
     cp .env.example .env
     ```
-5. Update the `.env` file with your database credentials:
+6. Update the `.env` file with your database credentials:
     ```
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -27,17 +31,17 @@
     DB_USERNAME=your_database_user
     DB_PASSWORD=your_database_password
     ```
-6. Generate the application key:
+7. Generate the application key:
     ```bash
     php artisan key:generate
     ```
-7. Run database migrations:
+8. Run database migrations:
     ```bash
     php artisan migrate
     ```
-8. Seed the database:
+9. Seed the database:
     ```bash
-    php artisan db:seed --class=MovieTableSeeder
+    php artisan db:seed --class=MoviesTableSeeder
     ```
 
 ## Usage
